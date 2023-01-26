@@ -1,25 +1,32 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState, useEffect } from 'react';
 
 function App() {
+  const [cards, setCards] = useState([]);
+
+  useEffect(() => {
+    fetch("https://6388b6e5a4bb27a7f78f96a5.mockapi.io/sakura-cards")
+      .then((response) => {
+        return response.json();
+      })
+      .then((recurso) => {
+        setCards(recurso.cardsReverse);
+      });
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {cards.map((card) => (
+        <div key={card.id}>
+          <img src={card.image} alt={card.name} />
+          <p>{card.name}</p>
+        </div>
+      ))}
     </div>
   );
 }
 
 export default App;
+
+
