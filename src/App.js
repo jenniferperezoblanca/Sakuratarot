@@ -1,6 +1,17 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
 
+function sacarCartasAleatorias(inferior, superior) {
+  var numPosibilidades = superior - inferior;
+  var aleatorio = Math.random() * (numPosibilidades + 1);
+  aleatorio = Math.floor(aleatorio);
+  console.info(aleatorio);
+  return inferior + aleatorio;
+}
+sacarCartasAleatorias(0, 55)
+
+
+
 function App() {
 const [cards, setCards] = useState([]);
 
