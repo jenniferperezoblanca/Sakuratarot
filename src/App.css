@@ -1,5 +1,106 @@
 .App {
   text-align: center;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  align-content: space-between;
+  flex-wrap: wrap;
+  background-size: cover;
+  width:100%;
+  height:100%;
+  background-color:#111011;
+
+}
+
+header {
+background-image: url("El\ tarot\ de\ jeni.png");
+width: 100%;
+height: 350px;
+
+
+}
+
+.title {
+  color: violet;
+  text-align: center;
+
+
+}
+
+
+.boton {
+
+  width: 100%;
+}
+
+.cartas{
+  padding: 2%;
+
+
+}
+
+.mostrartrescartas  p{
+color:white;
+font-size: 25px;
+
+
+}
+
+.global {
+margin-top: 20px;
+}
+
+.mostrartrescartas h2{
+  color:white;
+  font-size:20px;
+  margin:20%;
+}
+.mostrartrescartas {
+ display: flex;
+ justify-content: space-between;
+}
+
+
+.boton button {
+  margin-left: 650px;
+  margin-top: 50px;
+  margin-bottom: 80px;
+  width: 200px;
+  height: 50px;
+  background-color: pink;
+  color:red;
+  border-radius: 20%;
+  font-size: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+
+}
+
+
+
+
+.mostrartrescartas {
+  display: flex;
+  align-items: center;
+  margin-top: 10%;
+
+
+
+
+}
+
+.header{
+  width: 100%;
+}
+
+.titulo {
+  color:violet;
+  font-size: 80px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.tarjetas{
+  margin-left: 20px;
 }
 
 .App-logo {
@@ -7,10 +108,21 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.button {
+  width: 600px;
+  height: 50px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  color:violet;
+  background-color: crimson;
+  font-size: 20px;
+}
+
+.prueba {
+  width: 100%;
+  display: inline;
+  align-content: center;
 }
 
 .App-header {
@@ -32,6 +144,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
